@@ -3,23 +3,18 @@ import 'package:assignment2/widgets/custom_appbar.dart';
 import 'package:assignment2/widgets/donation_card.dart';
 import 'package:assignment2/data/donations_data.dart';
 
-class DonationScreen extends StatefulWidget {
+class DonationScreen extends StatelessWidget {
   const DonationScreen({super.key, required this.title});
 
   final String title;
 
   @override
-  State<DonationScreen> createState() => _DonationScreenState();
-}
-
-class _DonationScreenState extends State<DonationScreen> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: CustomAppBar(title: widget.title),
+      appBar: CustomAppBar(title: title),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: ListView.separated(
           itemCount: DonationData.donations.length,
           itemBuilder: (context, index) {
@@ -27,7 +22,7 @@ class _DonationScreenState extends State<DonationScreen> {
             return DonationCard(donation: donation);
           },
           separatorBuilder: (context,index){
-            return Padding(
+            return  Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0), // Add left & right padding
               child: Divider(thickness: 1, color: Colors.grey.shade300),
             );// Divider between items
