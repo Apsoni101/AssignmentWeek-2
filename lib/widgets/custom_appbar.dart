@@ -11,6 +11,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget{
     return AppBar(
       backgroundColor: Colors.white,
       centerTitle: true,
+      //can also use row for placing icon at particular spot
       title: Text(
         title,
         style: TextStyle(fontWeight: FontWeight.bold, fontSize: 21),

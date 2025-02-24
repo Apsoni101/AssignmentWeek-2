@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class CircularIconButton extends StatelessWidget {
   final IconData icon;
+
   const CircularIconButton({super.key, required this.icon});
 
   @override
@@ -13,9 +14,8 @@ class CircularIconButton extends StatelessWidget {
         shape: const CircleBorder(),
         color: Colors.white,
         child: IconButton(
-          onPressed: (){},
-          icon: Icon(icon, color: Colors.black,size: 22,weight: 900),
-          splashRadius: 17,
+          onPressed: () {},
+          icon: Icon(icon, color: Colors.black, size: 22, weight: 900),
         ),
       ),
     );
