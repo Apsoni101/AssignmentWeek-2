@@ -23,9 +23,9 @@ class DonationScreen extends StatelessWidget {
           },
           separatorBuilder: (context,index){
             return  Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0), // Add left & right padding
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: Divider(thickness: 1, color: Colors.grey.shade300),
-            );// Divider between items
+            );
           },
         ),
       ),
